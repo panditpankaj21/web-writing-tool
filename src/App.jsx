@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import './App.css'
 import Editor from './pages/EditorPage';
 import BlackButton from './components/BlackButton';
+import './App.css';
 
 function App() {
-  const [isFirst, setIsFirst] = useState(true)
+  const [isClicked, setIsClicked] = useState(true)
 
   const style = {
     display:"flex",
@@ -14,11 +14,11 @@ function App() {
   }
 
   const handleClick = () => {
-    setIsFirst(false)
+    setIsClicked(false)
   }
   return (
     <>
-      {isFirst ? (
+      {isClicked ? (
         <div style={style} >
           <BlackButton onClick={handleClick} label="Add Block"/>
         </div>
