@@ -156,9 +156,15 @@ function ShowBlock({
                 </>
             )}
             {!isEditing && !haveToEdit && type === 'picture' && (
-                <>
-                    <img src={URL.createObjectURL(content)} style={{ width: '300px', height: 'auto' }} />
-                </>
+                <div>
+                    <img 
+                        src={URL.createObjectURL(content)} 
+                        style={{ 
+                            width: '300px', 
+                            height: 'auto', 
+                        }} 
+                    />
+                </div>
             )}
             
             {isHovered && !haveToEdit && (
